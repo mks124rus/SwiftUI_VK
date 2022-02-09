@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-struct ContentView: View {
+struct LoginView: View {
     
     @State private var login = ""
     @State private var password = ""
@@ -68,7 +68,6 @@ struct ContentView: View {
                                 .font(.title3)
                                 .fontWeight(.medium)
                                 .foregroundColor(.white)
-                            
                                 .padding()
                             
                             SecureField("", text: $password)
@@ -116,7 +115,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LoginView()
     }
 }
 

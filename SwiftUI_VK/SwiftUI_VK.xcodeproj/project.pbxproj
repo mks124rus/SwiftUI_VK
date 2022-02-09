@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D498AD6B27B3B49900C41A96 /* SwiftUI_VKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */; };
-		D498AD6D27B3B49900C41A96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498AD6C27B3B49900C41A96 /* ContentView.swift */; };
+		D498AD6D27B3B49900C41A96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498AD6C27B3B49900C41A96 /* LoginView.swift */; };
 		D498AD6F27B3B49E00C41A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D498AD6E27B3B49E00C41A96 /* Assets.xcassets */; };
 		D498AD7227B3B49E00C41A96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D498AD7127B3B49E00C41A96 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		D498AD6727B3B49900C41A96 /* SwiftUI_VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_VKApp.swift; sourceTree = "<group>"; };
-		D498AD6C27B3B49900C41A96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D498AD6C27B3B49900C41A96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D498AD6E27B3B49E00C41A96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D498AD7127B3B49E00C41A96 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */,
-				D498AD6C27B3B49900C41A96 /* ContentView.swift */,
+				D498AD6C27B3B49900C41A96 /* LoginView.swift */,
 				D498AD6E27B3B49E00C41A96 /* Assets.xcassets */,
 				D498AD7027B3B49E00C41A96 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D498AD6D27B3B49900C41A96 /* ContentView.swift in Sources */,
+				D498AD6D27B3B49900C41A96 /* LoginView.swift in Sources */,
 				D498AD6B27B3B49900C41A96 /* SwiftUI_VKApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
