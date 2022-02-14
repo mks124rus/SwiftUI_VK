@@ -10,12 +10,12 @@ import SwiftUI
 struct GroupNameView: View {
     
     var text = "Group Name"
-    private let textSize = Constants().textSize
+    private let font = Constants().font
     
     var body: some View {
         
         Text(text)
-            .font(.system(size: textSize, weight: .medium))
+            .font(font)
             .lineLimit(1)
     }
 }
