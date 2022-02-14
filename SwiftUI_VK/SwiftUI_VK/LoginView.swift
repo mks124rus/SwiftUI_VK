@@ -14,6 +14,17 @@ struct LoginView: View {
     @State private var password = ""
     @State private var shouldShowLogo: Bool = true
     
+    private var inputIsValid: Bool {
+        if login.isEmpty || password.isEmpty {
+            return false
+        }
+        return true
+    }
+    
+    private var buttonColor: Color {
+        return inputIsValid ? .white : .gray
+    }
+    
     private let keyboardIsOnPublisher = Publishers.Merge (
         NotificationCenter
             .default
@@ -82,22 +93,13 @@ struct LoginView: View {
                     Button {
                         print("Login...")
                     } label: {
-                        if login.isEmpty || password.isEmpty {
-                            Text("Log in")
-                                .font(.title3)
-                                .foregroundColor(.gray)
-                                .padding()
-                                .frame(width: 200, height: 50, alignment: .center)
-                        } else {
-                            Text("Log in")
-                                .font(.title2)
-                                .foregroundColor(.white)
-                                .padding()
-                                .frame(width: 200, height: 50, alignment: .center)
-                        }
-                        
+                        Text("Log in")
+                            .font(.title2)
+                            .foregroundColor(buttonColor)
+                            .padding()
+                            .frame(width: 200, height: 50, alignment: .center)
                     }
-                    .disabled(login.isEmpty || password.isEmpty)
+                    .disabled(!inputIsValid)
                     
                     Spacer()
                 }
