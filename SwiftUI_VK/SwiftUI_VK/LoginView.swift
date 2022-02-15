@@ -10,9 +10,11 @@ import Combine
 
 struct LoginView: View {
     
+    //MARK: - Private Properties
     @State private var login = ""
     @State private var password = ""
     @State private var shouldShowLogo: Bool = true
+    @State private var showIncorrentInputWarning = false
     
     private var inputIsValid: Bool {
         if login.isEmpty || password.isEmpty {
@@ -37,6 +39,7 @@ struct LoginView: View {
             .map {_ in false}
     )
     
+    //MARK: - Properties
     var body: some View {
         
         ZStack {
@@ -90,9 +93,7 @@ struct LoginView: View {
                     
                     Spacer(minLength: 100)
                     
-                    Button {
-                        print("Login...")
-                    } label: {
+                    Button(action: verifyLoginData) {
                         Text("Log in")
                             .font(.title2)
                             .foregroundColor(buttonColor)
@@ -111,7 +112,23 @@ struct LoginView: View {
             }
         }.onTapGesture {
             UIApplication.shared.endEditing()
+            
+        }.alert(isPresented: $showIncorrentInputWarning, content: {
+            Alert(title: Text("Error"),
+                  message: Text("Incorrect Login or Password was entered."))
+        })
+    }
+    
+    //MARK: - Private functions
+    
+    private func verifyLoginData() {
+        if login == "admin" && password == "admin" {
+            print("Login...")
         }
+        else {
+            showIncorrentInputWarning = true
+        }
+        password = ""
     }
 }
 
