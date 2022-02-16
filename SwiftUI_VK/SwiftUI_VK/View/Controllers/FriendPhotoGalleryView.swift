@@ -6,19 +6,28 @@
 //
 
 import SwiftUI
-import QGrid
+import Grid
 
 struct FriendPhotoGalleryView: View {
     
     private let demoPhotos:[Photo] = Photo.creatPhotos()
+    private var style = StaggeredGridStyle(.vertical, tracks: 2, spacing: 10)
     
     var body: some View {
         
-        QGrid(demoPhotos, columns: 3) { photo in
-            FriendPhotoGalleryCellView(demoPhoto: photo)
-        }
-        .navigationBarTitle("Photos")
-        .padding([.horizontal, . top], 7)
+        ScrollView(style.axes) {
+            Grid(self.demoPhotos, id: \.self) { photo in
+                NavigationLink(destination: ImageDetailView(imageName: photo.url)) {
+                    Image(photo.url)
+                        .renderingMode(.original)
+                        .resizable()
+                        .background(Image("photoPlaceholder")
+                                        .resizable())
+                        .scaledToFit()
+                }
+            }
+        }.gridStyle(self.style)
+            .navigationTitle("Photos")
     }
 }
 
@@ -27,3 +36,5 @@ struct FriendPhotoGalleryView_Previews: PreviewProvider {
         FriendPhotoGalleryView()
     }
 }
+
+

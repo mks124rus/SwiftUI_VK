@@ -16,7 +16,8 @@
 		D45896E727BD1C0600D22A04 /* FriendPhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45896E627BD1C0500D22A04 /* FriendPhotoGalleryView.swift */; };
 		D45896EA27BD1DE500D22A04 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = D45896E927BD1DE500D22A04 /* QGrid */; };
 		D45896EC27BD229D00D22A04 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45896EB27BD229D00D22A04 /* Photo.swift */; };
-		D45896EE27BD434700D22A04 /* FriendPhotoGalleryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45896ED27BD434700D22A04 /* FriendPhotoGalleryCellView.swift */; };
+		D45896EE27BD434700D22A04 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45896ED27BD434700D22A04 /* ImageDetailView.swift */; };
+		D459CC8127BD829700ABA7AF /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = D459CC8027BD829700ABA7AF /* Grid */; };
 		D498AD6B27B3B49900C41A96 /* SwiftUI_VKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */; };
 		D498AD6D27B3B49900C41A96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498AD6C27B3B49900C41A96 /* LoginView.swift */; };
 		D498AD6F27B3B49E00C41A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D498AD6E27B3B49E00C41A96 /* Assets.xcassets */; };
@@ -40,7 +41,7 @@
 		D45896E427BCCE4A00D22A04 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		D45896E627BD1C0500D22A04 /* FriendPhotoGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoGalleryView.swift; sourceTree = "<group>"; };
 		D45896EB27BD229D00D22A04 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		D45896ED27BD434700D22A04 /* FriendPhotoGalleryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoGalleryCellView.swift; sourceTree = "<group>"; };
+		D45896ED27BD434700D22A04 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 		D498AD6727B3B49900C41A96 /* SwiftUI_VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_VKApp.swift; sourceTree = "<group>"; };
 		D498AD6C27B3B49900C41A96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D459CC8127BD829700ABA7AF /* Grid in Frameworks */,
 				D45896EA27BD1DE500D22A04 /* QGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,14 +78,6 @@
 				D45896EB27BD229D00D22A04 /* Photo.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D45896EF27BD437100D22A04 /* FriendPhotoGallery */ = {
-			isa = PBXGroup;
-			children = (
-				D45896ED27BD434700D22A04 /* FriendPhotoGalleryCellView.swift */,
-			);
-			path = FriendPhotoGallery;
 			sourceTree = "<group>";
 		};
 		D45896F027BD43DF00D22A04 /* View */ = {
@@ -105,6 +99,7 @@
 				D45896D827BC1FE000D22A04 /* ContainerView.swift */,
 				D45896E227BCCE1000D22A04 /* GroupsListView.swift */,
 				D45896E627BD1C0500D22A04 /* FriendPhotoGalleryView.swift */,
+				D45896ED27BD434700D22A04 /* ImageDetailView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				D49BD4E827BABEE9007F1C7A /* FriendList */,
-				D45896EF27BD437100D22A04 /* FriendPhotoGallery */,
 				D49BD4E927BABF04007F1C7A /* GroupList */,
 			);
 			path = Cells;
@@ -202,6 +196,7 @@
 			name = SwiftUI_VK;
 			packageProductDependencies = (
 				D45896E927BD1DE500D22A04 /* QGrid */,
+				D459CC8027BD829700ABA7AF /* Grid */,
 			);
 			productName = SwiftUI_VK;
 			productReference = D498AD6727B3B49900C41A96 /* SwiftUI_VK.app */;
@@ -233,6 +228,7 @@
 			mainGroup = D498AD5E27B3B49900C41A96;
 			packageReferences = (
 				D45896E827BD1DE500D22A04 /* XCRemoteSwiftPackageReference "QGrid" */,
+				D459CC7F27BD829700ABA7AF /* XCRemoteSwiftPackageReference "swiftui-grid" */,
 			);
 			productRefGroup = D498AD6827B3B49900C41A96 /* Products */;
 			projectDirPath = "";
@@ -267,7 +263,7 @@
 				D49BD4E727BABE92007F1C7A /* GroupCellView.swift in Sources */,
 				D45896E727BD1C0600D22A04 /* FriendPhotoGalleryView.swift in Sources */,
 				D45896DD27BC23D000D22A04 /* TabBarView.swift in Sources */,
-				D45896EE27BD434700D22A04 /* FriendPhotoGalleryCellView.swift in Sources */,
+				D45896EE27BD434700D22A04 /* ImageDetailView.swift in Sources */,
 				D49BD4E027BAB319007F1C7A /* AvatarView.swift in Sources */,
 				D49BD4DC27BA8E1B007F1C7A /* CircleShadow.swift in Sources */,
 				D49BD4E227BABC19007F1C7A /* FriendNameView.swift in Sources */,
@@ -495,6 +491,14 @@
 				minimumVersion = 0.1.4;
 			};
 		};
+		D459CC7F27BD829700ABA7AF /* XCRemoteSwiftPackageReference "swiftui-grid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-grid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -502,6 +506,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D45896E827BD1DE500D22A04 /* XCRemoteSwiftPackageReference "QGrid" */;
 			productName = QGrid;
+		};
+		D459CC8027BD829700ABA7AF /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D459CC7F27BD829700ABA7AF /* XCRemoteSwiftPackageReference "swiftui-grid" */;
+			productName = Grid;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

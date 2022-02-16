@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Photo: Identifiable {
+struct Photo: Identifiable, Hashable {
     
     internal init(url: String, ownerID: Int){
         self.url = url
