@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AvatarView: View {
-    var image = "avatarPlaceHolder"
+    var image: String
     
     var body: some View {
         
@@ -20,6 +20,6 @@ struct AvatarView: View {
 
 struct AvatarView_Previews: PreviewProvider {
     static var previews: some View {
-        AvatarView()
+        AvatarView(image: "")
     }
 }

@@ -21,10 +21,10 @@ struct Friend: Identifiable {
     var avatar: String
     
     static func creatDemoFriends() -> [Friend]  {
-        return [Friend(firstName: "Megan", lastName: "Fox", avatar: ""),
-                Friend(firstName: "Jolie", lastName: "Angelina", avatar: ""),
-                Friend(firstName: "John", lastName: "Travolta", avatar: ""),
-                Friend(firstName: "Brad", lastName: "Pitt", avatar: ""),
-                Friend(firstName: "Jason", lastName: "Statham", avatar: "")].lazy.sorted(by: {$0.firstName < $1.firstName})
+        return [Friend(firstName: "Megan", lastName: "Fox", avatar: "fox"),
+                Friend(firstName: "Angelina", lastName: "Jolie", avatar: "jolie"),
+                Friend(firstName: "John", lastName: "Travolta", avatar: "travolta"),
+                Friend(firstName: "Brad", lastName: "Pitt", avatar: "pitt"),
+                Friend(firstName: "Jason", lastName: "Statham", avatar: "statham")].lazy.sorted(by: {$0.firstName < $1.firstName})
     }
 }

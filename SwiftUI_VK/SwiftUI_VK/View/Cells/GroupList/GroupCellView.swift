@@ -1,5 +1,5 @@
 //
-//  FriendCellView.swift
+//  GroupCellView.swift
 //  SwiftUI_VK
 //
 //  Created by Максим Валюшко on 14.02.2022.
@@ -7,21 +7,21 @@
 
 import SwiftUI
 
-struct FriendCellView: View {
+struct GroupCellView: View {
     
-    let friend: Friend
+    let group: Group
+    
     private let insets = Constants().edgeInstets
     private let heightCell = Constants().heightCell
     
     var body: some View {
-
         HStack{
-            FriendNameView(text: friend.firstName + " " + friend.lastName)
+            GroupNameView(text: group.name)
                 .padding(insets)
             
             Spacer(minLength: 20)
             
-            AvatarView()
+            AvatarView(image: group.avatar)
                 .padding(insets)
             
         }.frame(height: heightCell)

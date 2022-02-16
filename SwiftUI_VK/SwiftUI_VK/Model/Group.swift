@@ -18,6 +18,7 @@ struct Group: Identifiable {
     var name: String
     var avatar: String
     
+    
     static func creatDemoGroups() -> [Group] {
         return [Group(name: "Apple", avatar: ""),
                 Group(name: "AUTO", avatar: ""),

@@ -13,7 +13,9 @@ struct FriendsListView: View {
     
     var body: some View {
         List(friends){ friend in
-            FriendCellView(friend: friend)
+            NavigationLink(destination: FriendPhotoGalleryView()){
+                FriendCellView(friend: friend)
+            }
         }
         .listStyle(.plain)
     }
