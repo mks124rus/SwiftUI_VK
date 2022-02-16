@@ -9,12 +9,14 @@ import SwiftUI
 
 struct GroupCellView: View {
     
+    let group: Group
+    
     private let insets = Constants().edgeInstets
     private let heightCell = Constants().heightCell
     
     var body: some View {
         HStack{
-            GroupNameView()
+            GroupNameView(text: group.name)
                 .padding(insets)
             
             Spacer(minLength: 20)
@@ -23,13 +25,5 @@ struct GroupCellView: View {
                 .padding(insets)
             
         }.frame(height: heightCell)
-        //удалить
-            .border(.black)
-    }
-}
-
-struct GroupCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        GroupCellView()
     }
 }

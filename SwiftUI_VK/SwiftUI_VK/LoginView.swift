@@ -10,9 +10,12 @@ import Combine
 
 struct LoginView: View {
     
+    @Binding var isUserLoggedIn: Bool
+    
     //MARK: - Private Properties
-    @State private var login = ""
-    @State private var password = ""
+    
+    @State private var login = "admin"
+    @State private var password = "admin"
     @State private var shouldShowLogo: Bool = true
     @State private var showIncorrentInputWarning = false
     
@@ -123,18 +126,12 @@ struct LoginView: View {
     
     private func verifyLoginData() {
         if login == "admin" && password == "admin" {
-            print("Login...")
+            isUserLoggedIn = true
         }
         else {
             showIncorrentInputWarning = true
         }
         password = ""
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
     }
 }
 

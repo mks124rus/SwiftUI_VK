@@ -9,13 +9,14 @@ import SwiftUI
 
 struct FriendCellView: View {
     
+    let friend: Friend
     private let insets = Constants().edgeInstets
     private let heightCell = Constants().heightCell
     
     var body: some View {
 
         HStack{
-            FriendNameView()
+            FriendNameView(text: friend.firstName + " " + friend.lastName)
                 .padding(insets)
             
             Spacer(minLength: 20)
@@ -24,13 +25,5 @@ struct FriendCellView: View {
                 .padding(insets)
             
         }.frame(height: heightCell)
-        //удалить
-            .border(.black)
-    }
-}
-
-struct FriendCell_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendCellView()
     }
 }
