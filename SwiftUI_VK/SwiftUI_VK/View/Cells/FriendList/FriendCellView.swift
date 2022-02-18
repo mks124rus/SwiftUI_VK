@@ -16,7 +16,7 @@ struct FriendCellView: View {
     var body: some View {
 
         HStack{
-            FriendNameView(text: friend.firstName + " " + friend.lastName)
+            FriendNameView(text: friend.fullName)
                 .padding(insets)
             
             Spacer(minLength: 20)

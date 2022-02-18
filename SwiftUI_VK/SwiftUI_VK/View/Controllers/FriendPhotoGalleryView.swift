@@ -10,24 +10,30 @@ import Grid
 
 struct FriendPhotoGalleryView: View {
     
-    private let demoPhotos:[Photo] = Photo.creatPhotos()
-    private var style = StaggeredGridStyle(.vertical, tracks: 2, spacing: 10)
+    private let photos:[Photo] = Photo.creatDemoPhotos()
+    private var style = StaggeredGridStyle(.vertical, tracks: 3, spacing: 5)
     
     var body: some View {
         
         ScrollView(style.axes) {
-            Grid(self.demoPhotos, id: \.self) { photo in
+            Grid(photos) { photo in
                 NavigationLink(destination: ImageDetailView(imageName: photo.url)) {
-                    Image(photo.url)
-                        .renderingMode(.original)
-                        .resizable()
-                        .background(Image("photoPlaceholder")
-                                        .resizable())
-                        .scaledToFit()
+                    VStack{
+                        Image(photo.url)
+                            .renderingMode(.original)
+                            .resizable()
+                            .scaledToFill()
+                            .background(Image("photoPlaceholder")
+                                            .resizable())
+                    }
+                    .frame(width: 125, height: 125, alignment: .center)
+                    .clipped()
+                    
                 }
             }
-        }.gridStyle(self.style)
-            .navigationTitle("Photos")
+        }
+        .gridStyle(self.style)
+        .navigationTitle("Photos")
     }
 }
 

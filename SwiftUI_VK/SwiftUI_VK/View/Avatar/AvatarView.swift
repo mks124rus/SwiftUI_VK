@@ -9,17 +9,24 @@ import SwiftUI
 
 struct AvatarView: View {
     var image: String
-    
+//    var url: URL?
     var body: some View {
         
         AvatarImage{
             Image(image)
         }
-    }
-}
-
-struct AvatarView_Previews: PreviewProvider {
-    static var previews: some View {
-        AvatarView(image: "")
+//        AsyncImage(url: url) {image in
+//            image
+//                .resizable()
+//                .scaledToFill()
+//                .frame(width: 50, height: 50)
+//                .clipShape(Circle())
+//                .modifier(CircleShadow())
+//        } placeholder: {
+//            Image("avatarPlaceHolder")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .clipped()
+//        }
     }
 }
