@@ -16,19 +16,22 @@ struct FriendPhotoGalleryView: View {
     var body: some View {
         
         ScrollView(style.axes) {
-            Grid(photos) { photo in
-                NavigationLink(destination: ImageDetailView(imageName: photo.url)) {
-                    VStack{
-                        Image(photo.url)
-                            .renderingMode(.original)
-                            .resizable()
-                            .scaledToFill()
-                            .background(Image("photoPlaceholder")
-                                            .resizable())
+            
+            GeometryReader{ screen in
+                let side = screen.size.width/3
+                Grid(photos) { photo in
+                    NavigationLink(destination: ImageDetailView(imageName: photo.url)) {
+                        VStack{
+                            Image(photo.url)
+                                .renderingMode(.original)
+                                .resizable()
+                                .scaledToFill()
+                                .background(Image("photoPlaceholder")
+                                                .resizable())
+                        }
+                        .frame(width: side, height: side, alignment: .center)
+                        .clipped()
                     }
-                    .frame(width: 125, height: 125, alignment: .center)
-                    .clipped()
-                    
                 }
             }
         }
