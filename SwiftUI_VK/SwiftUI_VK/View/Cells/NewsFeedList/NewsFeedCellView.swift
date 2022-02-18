@@ -30,7 +30,7 @@ struct NewsFeedCellView_Previews: PreviewProvider {
 
 
 extension NewsFeedCellView {
-    
+    //    MARK: - Header
     private struct Header: View{
         
         var body: some View {
@@ -53,10 +53,10 @@ extension NewsFeedCellView {
             }
         }
     }
-    
+    //    MARK: - Post
     private struct Post: View {
         
-        
+
         var body: some View {
             
             Text("Some text of News")
@@ -66,7 +66,7 @@ extension NewsFeedCellView {
                 .scaledToFit()
         }
     }
-    
+    //    MARK: - Footer
     private struct Footer: View{
         
         var likeCount: Int

@@ -97,14 +97,14 @@
 		D45896F127BD446600D22A04 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D498AD6C27B3B49900C41A96 /* LoginView.swift */,
-				D45896DA27BC219500D22A04 /* FriendsListView.swift */,
-				D45896DC27BC23D000D22A04 /* TabBarView.swift */,
 				D45896D827BC1FE000D22A04 /* ContainerView.swift */,
-				D45896E227BCCE1000D22A04 /* GroupsListView.swift */,
 				D45896E627BD1C0500D22A04 /* FriendPhotoGalleryView.swift */,
+				D45896DA27BC219500D22A04 /* FriendsListView.swift */,
+				D45896E227BCCE1000D22A04 /* GroupsListView.swift */,
 				D45896ED27BD434700D22A04 /* ImageDetailView.swift */,
+				D498AD6C27B3B49900C41A96 /* LoginView.swift */,
 				D459CC8927BFD45B00ABA7AF /* NewsFeedListView.swift */,
+				D45896DC27BC23D000D22A04 /* TabBarView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
