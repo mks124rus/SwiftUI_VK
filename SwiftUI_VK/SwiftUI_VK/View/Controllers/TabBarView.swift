@@ -14,7 +14,7 @@ struct TabBarView: View {
         TabView(selection: $selection ){
             
             NavigationView{
-                Text("NewsListView")
+                NewsFeedListView()
                     .navigationBarTitle("News", displayMode: .inline)
             }
             .tabItem{

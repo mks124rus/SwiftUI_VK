@@ -18,6 +18,8 @@
 		D45896EC27BD229D00D22A04 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45896EB27BD229D00D22A04 /* Photo.swift */; };
 		D45896EE27BD434700D22A04 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45896ED27BD434700D22A04 /* ImageDetailView.swift */; };
 		D459CC8127BD829700ABA7AF /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = D459CC8027BD829700ABA7AF /* Grid */; };
+		D459CC8A27BFD45B00ABA7AF /* NewsFeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D459CC8927BFD45B00ABA7AF /* NewsFeedListView.swift */; };
+		D459CC8D27BFD50800ABA7AF /* NewsFeedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D459CC8C27BFD50800ABA7AF /* NewsFeedCellView.swift */; };
 		D498AD6B27B3B49900C41A96 /* SwiftUI_VKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */; };
 		D498AD6D27B3B49900C41A96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498AD6C27B3B49900C41A96 /* LoginView.swift */; };
 		D498AD6F27B3B49E00C41A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D498AD6E27B3B49E00C41A96 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		D45896E627BD1C0500D22A04 /* FriendPhotoGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoGalleryView.swift; sourceTree = "<group>"; };
 		D45896EB27BD229D00D22A04 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		D45896ED27BD434700D22A04 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		D459CC8927BFD45B00ABA7AF /* NewsFeedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedListView.swift; sourceTree = "<group>"; };
+		D459CC8C27BFD50800ABA7AF /* NewsFeedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCellView.swift; sourceTree = "<group>"; };
 		D498AD6727B3B49900C41A96 /* SwiftUI_VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_VKApp.swift; sourceTree = "<group>"; };
 		D498AD6C27B3B49900C41A96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -100,8 +104,17 @@
 				D45896E227BCCE1000D22A04 /* GroupsListView.swift */,
 				D45896E627BD1C0500D22A04 /* FriendPhotoGalleryView.swift */,
 				D45896ED27BD434700D22A04 /* ImageDetailView.swift */,
+				D459CC8927BFD45B00ABA7AF /* NewsFeedListView.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D459CC8B27BFD4E700ABA7AF /* NewsFeedList */ = {
+			isa = PBXGroup;
+			children = (
+				D459CC8C27BFD50800ABA7AF /* NewsFeedCellView.swift */,
+			);
+			path = NewsFeedList;
 			sourceTree = "<group>";
 		};
 		D498AD5E27B3B49900C41A96 = {
@@ -172,6 +185,7 @@
 		D49BD4EA27BABF78007F1C7A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D459CC8B27BFD4E700ABA7AF /* NewsFeedList */,
 				D49BD4E827BABEE9007F1C7A /* FriendList */,
 				D49BD4E927BABF04007F1C7A /* GroupList */,
 			);
@@ -257,9 +271,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D498AD6D27B3B49900C41A96 /* LoginView.swift in Sources */,
+				D459CC8A27BFD45B00ABA7AF /* NewsFeedListView.swift in Sources */,
 				D45896E127BC24F800D22A04 /* Friend.swift in Sources */,
 				D45896E327BCCE1100D22A04 /* GroupsListView.swift in Sources */,
 				D45896E527BCCE4A00D22A04 /* Group.swift in Sources */,
+				D459CC8D27BFD50800ABA7AF /* NewsFeedCellView.swift in Sources */,
 				D49BD4E727BABE92007F1C7A /* GroupCellView.swift in Sources */,
 				D45896E727BD1C0600D22A04 /* FriendPhotoGalleryView.swift in Sources */,
 				D45896DD27BC23D000D22A04 /* TabBarView.swift in Sources */,
