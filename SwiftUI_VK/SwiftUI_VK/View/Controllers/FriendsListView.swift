@@ -44,7 +44,7 @@ struct FriendsListView: View {
                 return firstChar
             })
         }()
-        print(sectionFriends)
+//        print(sectionFriends)
         return sectionFriends
     }
     

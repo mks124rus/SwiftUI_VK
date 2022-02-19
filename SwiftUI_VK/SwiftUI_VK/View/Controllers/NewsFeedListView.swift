@@ -10,7 +10,7 @@ import SwiftUI
 struct NewsFeedListView: View {
     var body: some View {
         List {
-            ForEach (1..<6) {_ in
+            ForEach (1..<4) {_ in
                 NewsFeedCellView()
             }
         }

@@ -13,8 +13,12 @@ struct NewsFeedCellView: View {
         
         
         VStack(alignment:.leading){
-            Header()
-            Post()
+            Header(avatar: "fox", name: "Megan Fox", date: "today")
+            Post(text: """
+Megan Denise Fox (born May 16, 1986) is an American actress and model.
+
+She has made multiple appearances in major film franchises, most notably the Transformers franchise, as well as numerous magazines such as Maxim, Rolling Stone, and FHM. She is the recipient of several accolades, including two Scream Awards and four Teen Choice Awards.
+""", image: "fox")
             Footer(likeCount: 9768, commentsCount: 55, repostCount: 124)
         }
         
@@ -33,19 +37,23 @@ extension NewsFeedCellView {
     //    MARK: - Header
     private struct Header: View{
         
+        var avatar: String
+        var name: String
+        var date: String
+        
         var body: some View {
             HStack(){
-                AvatarView(image: "")
+                AvatarView(image: avatar)
                 
                 VStack{
                     HStack{
-                        Text("Group or Friend name")
+                        Text(name)
                             .lineLimit(1)
                             .font(Constants.init().font)
                         Spacer()
                     }
                     HStack{
-                        Text("Date")
+                        Text(date)
                             .lineLimit(1)
                         Spacer()
                     }
@@ -56,12 +64,14 @@ extension NewsFeedCellView {
     //    MARK: - Post
     private struct Post: View {
         
-
+        var text: String
+        var image: String
+        
         var body: some View {
             
-            Text("Some text of News")
+            Text(text)
                 .padding(Constants.init().edgeInstets)
-            Image("fox")
+            Image(image)
                 .resizable()
                 .scaledToFit()
         }
