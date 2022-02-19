@@ -70,7 +70,6 @@ extension NewsFeedCellView {
         var body: some View {
             
             Text(text)
-                .padding(Constants.init().edgeInstets)
             Image(image)
                 .resizable()
                 .scaledToFit()
