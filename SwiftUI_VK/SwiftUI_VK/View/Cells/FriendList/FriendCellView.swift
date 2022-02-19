@@ -10,19 +10,16 @@ import SwiftUI
 struct FriendCellView: View {
     
     let friend: Friend
-    private let insets = Constants().edgeInstets
     private let heightCell = Constants().heightCell
     
     var body: some View {
 
         HStack{
             FriendNameView(text: friend.fullName)
-                .padding(insets)
             
             Spacer(minLength: 20)
             
             AvatarView(image: friend.avatar)
-                .padding(insets)
             
         }.frame(height: heightCell)
     }
