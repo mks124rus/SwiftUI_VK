@@ -20,6 +20,7 @@
 		D459CC8127BD829700ABA7AF /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = D459CC8027BD829700ABA7AF /* Grid */; };
 		D459CC8A27BFD45B00ABA7AF /* NewsFeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D459CC8927BFD45B00ABA7AF /* NewsFeedListView.swift */; };
 		D459CC8D27BFD50800ABA7AF /* NewsFeedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D459CC8C27BFD50800ABA7AF /* NewsFeedCellView.swift */; };
+		D470417B27C3D6C9000BF1AB /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470417A27C3D6C9000BF1AB /* VKLoginWebView.swift */; };
 		D498AD6B27B3B49900C41A96 /* SwiftUI_VKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */; };
 		D498AD6D27B3B49900C41A96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498AD6C27B3B49900C41A96 /* LoginView.swift */; };
 		D498AD6F27B3B49E00C41A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D498AD6E27B3B49E00C41A96 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		D45896ED27BD434700D22A04 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 		D459CC8927BFD45B00ABA7AF /* NewsFeedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedListView.swift; sourceTree = "<group>"; };
 		D459CC8C27BFD50800ABA7AF /* NewsFeedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCellView.swift; sourceTree = "<group>"; };
+		D470417A27C3D6C9000BF1AB /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
 		D498AD6727B3B49900C41A96 /* SwiftUI_VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_VKApp.swift; sourceTree = "<group>"; };
 		D498AD6C27B3B49900C41A96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				D498AD6C27B3B49900C41A96 /* LoginView.swift */,
 				D459CC8927BFD45B00ABA7AF /* NewsFeedListView.swift */,
 				D45896DC27BC23D000D22A04 /* TabBarView.swift */,
+				D470417A27C3D6C9000BF1AB /* VKLoginWebView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D470417B27C3D6C9000BF1AB /* VKLoginWebView.swift in Sources */,
 				D498AD6D27B3B49900C41A96 /* LoginView.swift in Sources */,
 				D459CC8A27BFD45B00ABA7AF /* NewsFeedListView.swift in Sources */,
 				D45896E127BC24F800D22A04 /* Friend.swift in Sources */,
