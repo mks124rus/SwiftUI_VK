@@ -23,12 +23,16 @@ struct AvatarImage: View {
     var body: some View {
         content
             .resizable()
-            .aspectRatio(1.0, contentMode: .fill)
+            .scaledToFill()
             .frame(width: squareSide, height: squareSide)
             .clipShape(Circle())
+            .background(Image("avatarPlaceHolder")
+                            .resizable()
+                            .scaledToFit()
+                            .clipped())
             .modifier(CircleShadow())
+
             .overlay(Circle()
                         .stroke(strokeBorderColor,lineWidth: strokeLineWidth))
-
     }
 }

@@ -17,7 +17,7 @@ struct Constants {
                              bottom: 5,
                              trailing: 10)
     
-    let font = Font.system(size: 20, weight: .medium, design: .default)
+    let font = Font.system(size: 16, weight: .medium, design: .default)
     
     let heightCell: CGFloat = 60
 }

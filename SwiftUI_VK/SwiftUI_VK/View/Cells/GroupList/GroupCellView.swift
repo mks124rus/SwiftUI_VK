@@ -9,27 +9,18 @@ import SwiftUI
 
 struct GroupCellView: View {
     
-    private let insets = Constants().edgeInstets
+    let group: Group
+    
     private let heightCell = Constants().heightCell
     
     var body: some View {
         HStack{
-            GroupNameView()
-                .padding(insets)
+            GroupNameView(text: group.name)
             
             Spacer(minLength: 20)
             
-            AvatarView()
-                .padding(insets)
+            AvatarView(image: group.avatar)
             
         }.frame(height: heightCell)
-        //удалить
-            .border(.black)
-    }
-}
-
-struct GroupCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        GroupCellView()
     }
 }
