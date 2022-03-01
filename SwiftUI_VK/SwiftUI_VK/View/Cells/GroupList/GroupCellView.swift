@@ -19,7 +19,7 @@ struct GroupCellView: View {
             
             Spacer(minLength: 20)
             
-            AvatarView(image: group.avatar)
+//            AvatarView(image: group.avatar)
             
         }.frame(height: heightCell)
     }

@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContainerView: View {
-    @State private var shouldShowMainView: Bool = false
+    
+    @ObservedObject var session = Session.shared
     
     var body: some View {
         
-        if shouldShowMainView {
+        if session.isUserLogin {
             TabBarView()
         } else {
-            LoginView(isUserLoggedIn: $shouldShowMainView)
+            VKLoginWebView()
         }
     }
 }

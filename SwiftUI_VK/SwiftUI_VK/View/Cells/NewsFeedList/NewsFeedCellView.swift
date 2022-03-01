@@ -43,7 +43,7 @@ extension NewsFeedCellView {
         
         var body: some View {
             HStack(){
-                AvatarView(image: avatar)
+//                AvatarView(image: avatar)
                 
                 VStack{
                     HStack{

@@ -24,7 +24,7 @@ struct TabBarView: View {
             
             
             NavigationView{
-                FriendsListView()
+                FriendsListView(viewModel: FriendModelView())
                     .navigationBarTitle("Friends", displayMode: .inline)
             }
             .tabItem{

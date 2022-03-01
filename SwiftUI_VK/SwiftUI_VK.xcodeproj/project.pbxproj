@@ -21,6 +21,12 @@
 		D459CC8A27BFD45B00ABA7AF /* NewsFeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D459CC8927BFD45B00ABA7AF /* NewsFeedListView.swift */; };
 		D459CC8D27BFD50800ABA7AF /* NewsFeedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D459CC8C27BFD50800ABA7AF /* NewsFeedCellView.swift */; };
 		D470417B27C3D6C9000BF1AB /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470417A27C3D6C9000BF1AB /* VKLoginWebView.swift */; };
+		D470418127CD3A0E000BF1AB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470418027CD3A0E000BF1AB /* Session.swift */; };
+		D470418327CD75E5000BF1AB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470418227CD75E5000BF1AB /* NetworkManager.swift */; };
+		D470418827CD83FF000BF1AB /* FriendModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470418727CD83FF000BF1AB /* FriendModelView.swift */; };
+		D470419127CE3C70000BF1AB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D470419027CE3C70000BF1AB /* SwiftyJSON */; };
+		D470419427CE3DD5000BF1AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D470419327CE3DD5000BF1AB /* Alamofire */; };
+		D470419827CE6A08000BF1AB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D470419727CE6A08000BF1AB /* Kingfisher */; };
 		D498AD6B27B3B49900C41A96 /* SwiftUI_VKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */; };
 		D498AD6D27B3B49900C41A96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D498AD6C27B3B49900C41A96 /* LoginView.swift */; };
 		D498AD6F27B3B49E00C41A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D498AD6E27B3B49E00C41A96 /* Assets.xcassets */; };
@@ -48,6 +54,9 @@
 		D459CC8927BFD45B00ABA7AF /* NewsFeedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedListView.swift; sourceTree = "<group>"; };
 		D459CC8C27BFD50800ABA7AF /* NewsFeedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCellView.swift; sourceTree = "<group>"; };
 		D470417A27C3D6C9000BF1AB /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
+		D470418027CD3A0E000BF1AB /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		D470418227CD75E5000BF1AB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D470418727CD83FF000BF1AB /* FriendModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModelView.swift; sourceTree = "<group>"; };
 		D498AD6727B3B49900C41A96 /* SwiftUI_VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_VKApp.swift; sourceTree = "<group>"; };
 		D498AD6C27B3B49900C41A96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -69,7 +78,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D459CC8127BD829700ABA7AF /* Grid in Frameworks */,
+				D470419427CE3DD5000BF1AB /* Alamofire in Frameworks */,
+				D470419127CE3C70000BF1AB /* SwiftyJSON in Frameworks */,
 				D45896EA27BD1DE500D22A04 /* QGrid in Frameworks */,
+				D470419827CE6A08000BF1AB /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +132,23 @@
 			path = NewsFeedList;
 			sourceTree = "<group>";
 		};
+		D470419527CE68F1000BF1AB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D470418227CD75E5000BF1AB /* NetworkManager.swift */,
+				D470418027CD3A0E000BF1AB /* Session.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D470419927CE6F18000BF1AB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D470418727CD83FF000BF1AB /* FriendModelView.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D498AD5E27B3B49900C41A96 = {
 			isa = PBXGroup;
 			children = (
@@ -140,9 +169,11 @@
 		D498AD6927B3B49900C41A96 /* SwiftUI_VK */ = {
 			isa = PBXGroup;
 			children = (
+				D470419927CE6F18000BF1AB /* ViewModel */,
 				D498AD6E27B3B49E00C41A96 /* Assets.xcassets */,
 				D45896DE27BC24DB00D22A04 /* Model */,
 				D498AD7027B3B49E00C41A96 /* Preview Content */,
+				D470419527CE68F1000BF1AB /* Services */,
 				D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */,
 				D45896F027BD43DF00D22A04 /* View */,
 			);
@@ -214,6 +245,9 @@
 			packageProductDependencies = (
 				D45896E927BD1DE500D22A04 /* QGrid */,
 				D459CC8027BD829700ABA7AF /* Grid */,
+				D470419027CE3C70000BF1AB /* SwiftyJSON */,
+				D470419327CE3DD5000BF1AB /* Alamofire */,
+				D470419727CE6A08000BF1AB /* Kingfisher */,
 			);
 			productName = SwiftUI_VK;
 			productReference = D498AD6727B3B49900C41A96 /* SwiftUI_VK.app */;
@@ -246,6 +280,9 @@
 			packageReferences = (
 				D45896E827BD1DE500D22A04 /* XCRemoteSwiftPackageReference "QGrid" */,
 				D459CC7F27BD829700ABA7AF /* XCRemoteSwiftPackageReference "swiftui-grid" */,
+				D470418F27CE3C70000BF1AB /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D470419227CE3DD5000BF1AB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D470419627CE6A08000BF1AB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = D498AD6827B3B49900C41A96 /* Products */;
 			projectDirPath = "";
@@ -273,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D470418127CD3A0E000BF1AB /* Session.swift in Sources */,
 				D470417B27C3D6C9000BF1AB /* VKLoginWebView.swift in Sources */,
 				D498AD6D27B3B49900C41A96 /* LoginView.swift in Sources */,
 				D459CC8A27BFD45B00ABA7AF /* NewsFeedListView.swift in Sources */,
@@ -284,11 +322,13 @@
 				D45896E727BD1C0600D22A04 /* FriendPhotoGalleryView.swift in Sources */,
 				D45896DD27BC23D000D22A04 /* TabBarView.swift in Sources */,
 				D45896EE27BD434700D22A04 /* ImageDetailView.swift in Sources */,
+				D470418327CD75E5000BF1AB /* NetworkManager.swift in Sources */,
 				D49BD4E027BAB319007F1C7A /* AvatarView.swift in Sources */,
 				D49BD4DC27BA8E1B007F1C7A /* CircleShadow.swift in Sources */,
 				D49BD4E227BABC19007F1C7A /* FriendNameView.swift in Sources */,
 				D49BD4EC27BAC058007F1C7A /* Constants.swift in Sources */,
 				D45896DB27BC219500D22A04 /* FriendsListView.swift in Sources */,
+				D470418827CD83FF000BF1AB /* FriendModelView.swift in Sources */,
 				D45896EC27BD229D00D22A04 /* Photo.swift in Sources */,
 				D49BD4DA27BA8B93007F1C7A /* AvatarImage.swift in Sources */,
 				D498AD6B27B3B49900C41A96 /* SwiftUI_VKApp.swift in Sources */,
@@ -519,6 +559,30 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		D470418F27CE3C70000BF1AB /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D470419227CE3DD5000BF1AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
+		D470419627CE6A08000BF1AB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -531,6 +595,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D459CC7F27BD829700ABA7AF /* XCRemoteSwiftPackageReference "swiftui-grid" */;
 			productName = Grid;
+		};
+		D470419027CE3C70000BF1AB /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D470418F27CE3C70000BF1AB /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D470419327CE3DD5000BF1AB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D470419227CE3DD5000BF1AB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		D470419727CE6A08000BF1AB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D470419627CE6A08000BF1AB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
