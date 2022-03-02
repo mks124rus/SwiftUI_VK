@@ -9,15 +9,13 @@ import SwiftUI
 
 struct FriendsListView: View {
     
-    @ObservedObject var viewModel: FriendModelView
+    @ObservedObject var viewModel: FriendViewModel
     
-    @State private var friends: [Friend] = Friend.creatDemoFriends()
+//    private var sectionFriends: Dictionary<String, [Friend]> = [:]
     
-    private var sectionFriends: Dictionary<String, [Friend]> = [:]
-    
-    init(viewModel: FriendModelView) {
+    init(viewModel: FriendViewModel) {
         self.viewModel = viewModel
-        self.sectionFriends = getSectionedDictionary()
+//        self.sectionFriends = getSectionedDictionary()
     }
     
     var body: some View {
@@ -33,15 +31,15 @@ struct FriendsListView: View {
         }
     }
     
-    private func getSectionedDictionary() -> Dictionary <String , [Friend]> {
-        let sectionFriends: Dictionary<String, [Friend]> = {
-            return Dictionary(grouping: viewModel.friends, by: {
-                let name = $0.firstName
-                let firstChar = String(name.first!).uppercased()
-                return firstChar
-            })
-        }()
-//        print(sectionFriends)
-        return sectionFriends
-    }
+//    private func getSectionedDictionary() -> Dictionary <String , [Friend]> {
+//        let sectionFriends: Dictionary<String, [Friend]> = {
+//            return Dictionary(grouping: viewModel.friends, by: {
+//                let name = $0.firstName
+//                let firstChar = String(name.first!).uppercased()
+//                return firstChar
+//            })
+//        }()
+////        print(sectionFriends)
+//        return sectionFriends
+//    }
 }

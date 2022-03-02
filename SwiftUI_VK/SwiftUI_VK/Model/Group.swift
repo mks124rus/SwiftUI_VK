@@ -7,23 +7,32 @@
 
 import Foundation
 
-struct Group: Identifiable {
-    
-    internal init(name: String, avatar: String){
-        self.name = name
-        self.avatar = avatar
-    }
-    
-    var id: UUID = UUID()
-    var name: String
+// MARK: - GroupResponse
+struct GroupResponse: Codable {
+    var response: GroupItems
+}
+
+// MARK: - GroupItems
+struct GroupItems: Codable {
+    var count: Int
+    var items: [Group]
+}
+
+// MARK: - Group
+struct Group: Codable, Identifiable {
+    var id: Int
+    var name, screenName: String
+    var isClosed: Int
     var avatar: String
     
-    
-    static func creatDemoGroups() -> [Group] {
-        return [Group(name: "Apple", avatar: ""),
-                Group(name: "AUTO", avatar: ""),
-                Group(name: "Music", avatar: ""),
-                Group(name: "Radio ENERGY (NRJ)", avatar: ""),
-                Group(name: "SMOTRA.RU", avatar: "")]
+    var avatarUrl: URL? {
+        return URL(string: avatar)
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case id, name
+        case screenName = "screen_name"
+        case isClosed = "is_closed"
+        case avatar = "photo_50"
     }
 }

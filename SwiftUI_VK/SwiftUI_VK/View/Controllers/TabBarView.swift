@@ -24,7 +24,7 @@ struct TabBarView: View {
             
             
             NavigationView{
-                FriendsListView(viewModel: FriendModelView())
+                FriendsListView(viewModel: FriendViewModel())
                     .navigationBarTitle("Friends", displayMode: .inline)
             }
             .tabItem{
@@ -33,7 +33,7 @@ struct TabBarView: View {
             }
             
             NavigationView {
-                GroupsListView()
+                GroupsListView(viewModel: GroupViewModel())
                     .navigationBarTitle("Groups", displayMode: .inline)
             }
             .tabItem{

@@ -23,7 +23,7 @@
 		D470417B27C3D6C9000BF1AB /* VKLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470417A27C3D6C9000BF1AB /* VKLoginWebView.swift */; };
 		D470418127CD3A0E000BF1AB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470418027CD3A0E000BF1AB /* Session.swift */; };
 		D470418327CD75E5000BF1AB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470418227CD75E5000BF1AB /* NetworkManager.swift */; };
-		D470418827CD83FF000BF1AB /* FriendModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470418727CD83FF000BF1AB /* FriendModelView.swift */; };
+		D470418827CD83FF000BF1AB /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D470418727CD83FF000BF1AB /* FriendViewModel.swift */; };
 		D470419127CE3C70000BF1AB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D470419027CE3C70000BF1AB /* SwiftyJSON */; };
 		D470419427CE3DD5000BF1AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D470419327CE3DD5000BF1AB /* Alamofire */; };
 		D470419827CE6A08000BF1AB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D470419727CE6A08000BF1AB /* Kingfisher */; };
@@ -39,6 +39,7 @@
 		D49BD4E527BABE41007F1C7A /* GroupNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BD4E427BABE41007F1C7A /* GroupNameView.swift */; };
 		D49BD4E727BABE92007F1C7A /* GroupCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BD4E627BABE92007F1C7A /* GroupCellView.swift */; };
 		D49BD4EC27BAC058007F1C7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BD4EB27BAC058007F1C7A /* Constants.swift */; };
+		D4D686FF27CFB20900561E76 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D686FE27CFB20900561E76 /* GroupViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +57,7 @@
 		D470417A27C3D6C9000BF1AB /* VKLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginWebView.swift; sourceTree = "<group>"; };
 		D470418027CD3A0E000BF1AB /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		D470418227CD75E5000BF1AB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		D470418727CD83FF000BF1AB /* FriendModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModelView.swift; sourceTree = "<group>"; };
+		D470418727CD83FF000BF1AB /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
 		D498AD6727B3B49900C41A96 /* SwiftUI_VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D498AD6A27B3B49900C41A96 /* SwiftUI_VKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_VKApp.swift; sourceTree = "<group>"; };
 		D498AD6C27B3B49900C41A96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		D49BD4E427BABE41007F1C7A /* GroupNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupNameView.swift; sourceTree = "<group>"; };
 		D49BD4E627BABE92007F1C7A /* GroupCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellView.swift; sourceTree = "<group>"; };
 		D49BD4EB27BAC058007F1C7A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D4D686FE27CFB20900561E76 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +146,8 @@
 		D470419927CE6F18000BF1AB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D470418727CD83FF000BF1AB /* FriendModelView.swift */,
+				D470418727CD83FF000BF1AB /* FriendViewModel.swift */,
+				D4D686FE27CFB20900561E76 /* GroupViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D686FF27CFB20900561E76 /* GroupViewModel.swift in Sources */,
 				D470418127CD3A0E000BF1AB /* Session.swift in Sources */,
 				D470417B27C3D6C9000BF1AB /* VKLoginWebView.swift in Sources */,
 				D498AD6D27B3B49900C41A96 /* LoginView.swift in Sources */,
@@ -328,7 +332,7 @@
 				D49BD4E227BABC19007F1C7A /* FriendNameView.swift in Sources */,
 				D49BD4EC27BAC058007F1C7A /* Constants.swift in Sources */,
 				D45896DB27BC219500D22A04 /* FriendsListView.swift in Sources */,
-				D470418827CD83FF000BF1AB /* FriendModelView.swift in Sources */,
+				D470418827CD83FF000BF1AB /* FriendViewModel.swift in Sources */,
 				D45896EC27BD229D00D22A04 /* Photo.swift in Sources */,
 				D49BD4DA27BA8B93007F1C7A /* AvatarImage.swift in Sources */,
 				D498AD6B27B3B49900C41A96 /* SwiftUI_VKApp.swift in Sources */,
