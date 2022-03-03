@@ -12,10 +12,11 @@ import SwiftyJSON
 protocol APIService {
     func loadFriends(completion: @escaping ([Friend]) -> Void)
     func loadGroups(completion: @escaping ([Group]) -> Void)
+    func loadFriendsPhotos(ownerID: Int, completion: @escaping ([Photo]) -> Void)
 }
 
 class NetworkManager: APIService {
-    
+
     let baseURL = "https://api.vk.com"
     let token = Session.shared.token
     let userID = Session.shared.userID
@@ -26,6 +27,36 @@ class NetworkManager: APIService {
     //        let session = URLSession(configuration: config)
     //        return session
     //    }()
+    
+    func loadFriendsPhotos(ownerID: Int, completion: @escaping ([Photo]) -> Void) {
+        let baseURL = baseURL
+        let path = "/method/photos.getAll"
+        
+        let params: Parameters = [
+            "access_token": "\(token ?? "")",
+            "owner_id": ownerID,
+            "album_id" : "wall",
+            "extended": "1",
+            "rev" : "1",
+            "count" : "50",
+            "v" : "5.130"
+        ]
+        
+        AF.request(baseURL + path, method: .get, parameters: params)
+            .responseDecodable(of: Photo.self) {(response) in
+                guard let data = response.data else {return}
+                
+                do {
+                    let photosJSON = try JSONDecoder().decode(PhotoResponse.self, from: data)
+                    let photos: [Photo] = photosJSON.response.items
+                    completion(photos)
+                } catch {
+                    print(error)
+                }
+                
+            }
+        
+    }
     
     func loadGroups(completion: @escaping ([Group]) -> Void) {
         let baseURL = baseURL

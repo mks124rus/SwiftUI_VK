@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ImageDetailView: View {
-    let imageName: String
+    let url: URL?
     
     var body: some View {
-        Image(imageName)
+        KFImage(url)
             .renderingMode(.original)
             .resizable()
             .scaledToFit()

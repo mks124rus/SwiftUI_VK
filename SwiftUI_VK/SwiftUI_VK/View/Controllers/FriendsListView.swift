@@ -21,7 +21,7 @@ struct FriendsListView: View {
     var body: some View {
         
         List(viewModel.friends){ friend in
-            NavigationLink(destination: FriendPhotoGalleryView()){
+            NavigationLink(destination: FriendPhotoGalleryView(friend: friend, viewModel: PhotoViewModel())){
                 FriendCellView(friend: friend)
             }
         }

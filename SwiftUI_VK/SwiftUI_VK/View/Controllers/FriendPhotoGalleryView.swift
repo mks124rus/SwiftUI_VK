@@ -7,22 +7,27 @@
 
 import SwiftUI
 import Grid
+import Kingfisher
 
 struct FriendPhotoGalleryView: View {
     
-    private let photos:[Photo] = Photo.creatDemoPhotos()
+    @ObservedObject var viewModel: PhotoViewModel
+    var friend: Friend
+    
     private var style = StaggeredGridStyle(.vertical, tracks: 3, spacing: 5)
     
+    init(friend: Friend, viewModel: PhotoViewModel){
+        self.viewModel = viewModel
+        self.friend = friend
+    }
     var body: some View {
-        
-        ScrollView(style.axes) {
-            
-            GeometryReader{ screen in
+        GeometryReader{ screen in
+            ScrollView(style.axes) {
                 let side = screen.size.width/3
-                Grid(photos) { photo in
-                    NavigationLink(destination: ImageDetailView(imageName: photo.url)) {
+                Grid(viewModel.photos) { photo in
+                    NavigationLink(destination: ImageDetailView(url: photo.url)) {
                         VStack{
-                            Image(photo.url)
+                            KFImage(photo.url)
                                 .renderingMode(.original)
                                 .resizable()
                                 .scaledToFill()
@@ -34,15 +39,12 @@ struct FriendPhotoGalleryView: View {
                     }
                 }
             }
+            .onAppear(){
+                viewModel.fetch(ownerID: friend.id)
+            }
         }
         .gridStyle(self.style)
         .navigationTitle("Photos")
-    }
-}
-
-struct FriendPhotoGalleryView_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendPhotoGalleryView()
     }
 }
 

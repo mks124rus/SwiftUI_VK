@@ -40,6 +40,7 @@
 		D49BD4E727BABE92007F1C7A /* GroupCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BD4E627BABE92007F1C7A /* GroupCellView.swift */; };
 		D49BD4EC27BAC058007F1C7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BD4EB27BAC058007F1C7A /* Constants.swift */; };
 		D4D686FF27CFB20900561E76 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D686FE27CFB20900561E76 /* GroupViewModel.swift */; };
+		D4D6870127CFBAAC00561E76 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6870027CFBAAC00561E76 /* PhotoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		D49BD4E627BABE92007F1C7A /* GroupCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellView.swift; sourceTree = "<group>"; };
 		D49BD4EB27BAC058007F1C7A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D4D686FE27CFB20900561E76 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		D4D6870027CFBAAC00561E76 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				D470418727CD83FF000BF1AB /* FriendViewModel.swift */,
 				D4D686FE27CFB20900561E76 /* GroupViewModel.swift */,
+				D4D6870027CFBAAC00561E76 /* PhotoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				D45896E727BD1C0600D22A04 /* FriendPhotoGalleryView.swift in Sources */,
 				D45896DD27BC23D000D22A04 /* TabBarView.swift in Sources */,
 				D45896EE27BD434700D22A04 /* ImageDetailView.swift in Sources */,
+				D4D6870127CFBAAC00561E76 /* PhotoViewModel.swift in Sources */,
 				D470418327CD75E5000BF1AB /* NetworkManager.swift in Sources */,
 				D49BD4E027BAB319007F1C7A /* AvatarView.swift in Sources */,
 				D49BD4DC27BA8E1B007F1C7A /* CircleShadow.swift in Sources */,
