@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct NewsFeedListView: View {
-    var body: some View {
-        List {
-            ForEach (1..<4) {_ in
-                NewsFeedCellView()
-            }
-        }
-        .listStyle(.plain)
+    @ObservedObject var viewModel: NewsViewModel
+    
+    init(viewModel: NewsViewModel){
+        self.viewModel = viewModel
     }
     
-}
-
-struct NewsFeedView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsFeedListView()
+    var body: some View {
+        List {
+            ForEach (viewModel.news) {news in
+                NewsFeedCellView(news: news )
+            }
+        }
+        .onAppear(){
+            viewModel.fetch()
+        }
+        .listStyle(.plain)
     }
 }

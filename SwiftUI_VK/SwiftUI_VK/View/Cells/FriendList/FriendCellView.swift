@@ -19,7 +19,7 @@ struct FriendCellView: View {
             
             Spacer(minLength: 20)
             
-            AvatarView(image: friend.avatar)
+            AvatarView(url: friend.avatarUrl)
             
         }.frame(height: heightCell)
     }

@@ -14,7 +14,7 @@ struct TabBarView: View {
         TabView(selection: $selection ){
             
             NavigationView{
-                NewsFeedListView()
+                NewsFeedListView(viewModel: NewsViewModel())
                     .navigationBarTitle("News", displayMode: .inline)
             }
             .tabItem{
@@ -24,7 +24,7 @@ struct TabBarView: View {
             
             
             NavigationView{
-                FriendsListView()
+                FriendsListView(viewModel: FriendViewModel())
                     .navigationBarTitle("Friends", displayMode: .inline)
             }
             .tabItem{
@@ -33,7 +33,7 @@ struct TabBarView: View {
             }
             
             NavigationView {
-                GroupsListView()
+                GroupsListView(viewModel: GroupViewModel())
                     .navigationBarTitle("Groups", displayMode: .inline)
             }
             .tabItem{

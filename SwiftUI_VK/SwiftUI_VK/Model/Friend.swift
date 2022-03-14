@@ -7,8 +7,12 @@
 
 import Foundation
 
+struct FriendsResponse: Codable {
+    var response: FriendItems
+}
+
 struct FriendItems: Codable {
-    var items: Friend
+    var items: [Friend]
 }
 
 struct Friend: Codable, Identifiable{
