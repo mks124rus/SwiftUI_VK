@@ -18,7 +18,7 @@ struct PhotoItems: Codable {
 struct Photo: Codable, Identifiable {
     var albumID, date, id, ownerID: Int
     var sizes: [Size]
-    var likes: Likes
+//    var likes: Likes
     
     var url: URL? {
         guard let xSize = sizes.first(where: {$0.type == "x"}) else {return nil}
@@ -30,7 +30,7 @@ struct Photo: Codable, Identifiable {
         case date, id
         case ownerID = "owner_id"
         case sizes
-        case likes
+//        case likes
     }
 }
 

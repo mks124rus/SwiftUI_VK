@@ -18,8 +18,11 @@ struct AvatarView: View {
             .resizable()
             .scaledToFill()
             .frame(width: 50, height: 50)
+            .background(Image("avatarPlaceHolder")
+                            .resizable())
             .clipShape(Circle())
             .modifier(CircleShadow())
+
         
     }
 }

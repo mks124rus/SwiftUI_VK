@@ -6,54 +6,45 @@
 //
 
 import SwiftUI
+import Kingfisher
+import Grid
 
 struct NewsFeedCellView: View {
+    
+    var news: News
     
     var body: some View {
         
         
         VStack(alignment:.leading){
-            Header(avatar: "fox", name: "Megan Fox", date: "today")
-            Post(text: """
-Megan Denise Fox (born May 16, 1986) is an American actress and model.
-
-She has made multiple appearances in major film franchises, most notably the Transformers franchise, as well as numerous magazines such as Maxim, Rolling Stone, and FHM. She is the recipient of several accolades, including two Scream Awards and four Teen Choice Awards.
-""", image: "fox")
-            Footer(likeCount: 9768, commentsCount: 55, repostCount: 124)
+            Header(news: news)
+            Post(news: news)
+            Footer(news: news)
         }
         
         
     }
 }
 
-struct NewsFeedCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsFeedCellView()
-    }
-}
-
-
 extension NewsFeedCellView {
     //    MARK: - Header
     private struct Header: View{
-        
-        var avatar: String
-        var name: String
-        var date: String
-        
+        var news: News
         var body: some View {
+            
             HStack(){
-//                AvatarView(image: avatar)
+                
+                AvatarView(url: news.avatarURL)
                 
                 VStack{
                     HStack{
-                        Text(name)
+                        Text(news.name ?? "Error name")
                             .lineLimit(1)
                             .font(Constants.init().font)
                         Spacer()
                     }
                     HStack{
-                        Text(date)
+                        Text(DateFormatter.newsFeedFormat(for: news.date ))
                             .lineLimit(1)
                         Spacer()
                     }
@@ -64,23 +55,25 @@ extension NewsFeedCellView {
     //    MARK: - Post
     private struct Post: View {
         
-        var text: String
-        var image: String
+        var news: News
         
         var body: some View {
             
-            Text(text)
-            Image(image)
-                .resizable()
-                .scaledToFit()
+            Text(news.text)
+            
+            if let attacments = news.attachments  {
+                if let url = attacments[0].photo?.url{
+                    KFImage(url)
+                        .resizable()
+                        .scaledToFill()
+                }
+            }
         }
     }
     //    MARK: - Footer
     private struct Footer: View{
         
-        var likeCount: Int
-        var commentsCount: Int
-        var repostCount: Int
+        var news: News
         
         var body: some View {
             HStack(spacing: 20){
@@ -90,7 +83,7 @@ extension NewsFeedCellView {
                         .frame(width: 20, height: 20)
                         .foregroundColor(Color.init(UIColor.darkGray))
                     
-                    Text(String(likeCount))
+                    Text(String(news.likes.count))
                         .lineLimit(1)
                         .foregroundColor(Color.init(UIColor.darkGray))
                 }
@@ -107,7 +100,7 @@ extension NewsFeedCellView {
                         .frame(width: 20, height: 20)
                         .foregroundColor(Color.init(UIColor.darkGray))
                     
-                    Text(String(repostCount))
+                    Text(String(news.reposts.count))
                         .lineLimit(1)
                         .foregroundColor(Color.init(UIColor.darkGray))
                 }
@@ -124,7 +117,7 @@ extension NewsFeedCellView {
                         .frame(width: 20, height: 20)
                         .foregroundColor(Color.init(UIColor.darkGray))
                     
-                    Text(String(commentsCount))
+                    Text(String(news.comments.count))
                         .lineLimit(1)
                         .foregroundColor(Color.init(UIColor.darkGray))
                 }
@@ -138,6 +131,3 @@ extension NewsFeedCellView {
         }
     }
 }
-
-
-

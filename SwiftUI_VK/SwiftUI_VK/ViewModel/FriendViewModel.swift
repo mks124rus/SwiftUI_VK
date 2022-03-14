@@ -13,9 +13,9 @@ class FriendViewModel: ObservableObject {
     private let networkManager = NetworkManager()
     
     public func fetch() {
-        networkManager.loadFriends { friends in
+        networkManager.loadFriends { [weak self] friends in
             let friendsFiltered = friends.filter{$0.firstName != "DELETED"}
-            self.friends = friendsFiltered
+            self?.friends = friendsFiltered
         }
     }
 }

@@ -14,8 +14,8 @@ class GroupViewModel: ObservableObject {
     private let networkManager = NetworkManager()
     
     public func fetch() {
-        networkManager.loadGroups{ groups in
-            self.groups = groups
+        networkManager.loadGroups{ [weak self] groups in
+            self?.groups = groups
         }
     }
 }
